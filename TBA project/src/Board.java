@@ -1,5 +1,5 @@
 
-public class Board {
+public class Board  {
 private Room[][] rooms;
 public Board(Room[][]rooms)
 {
@@ -7,7 +7,7 @@ public Board(Room[][]rooms)
 }
 public Board(int size)
 {
-	this.rooms= new Room[size][size];
+	this.rooms= new Room[5][5];
 }
 public void printBoard()
 {

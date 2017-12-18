@@ -9,13 +9,13 @@ public class Runner {
 	public static void main(String[] args) {
 	
 		Room[][] building = new Room[5][5];
-			
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
 		{
 			for (int y = 0; y < building[x].length; y++)
 			{
 				building[x][y] = new Room(x,y);
+				
 			}
 		}
 		
@@ -26,6 +26,7 @@ public class Runner {
 		int a = (int)(Math.random()*building.length);
 		int b = (int)(Math.random()*building.length);
 		building[a][b] = new Deathroom(a, b);
+		
 		 
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
@@ -33,7 +34,6 @@ public class Runner {
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
-		
 			System.out.println("Where would you like to move? (Choose W, S, A, D)");
 			String move = in.nextLine();
 			if(validMove(move, player1, building))
