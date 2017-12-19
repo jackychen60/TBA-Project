@@ -17,7 +17,9 @@ public void printBoard()
 		{
 			x.print();
 		}
+		System.out.println();
 	}
-	System.out.println();
+	
 }
+
 }
