@@ -9,7 +9,7 @@ public class Room {
 		yLoc = y;
 	}
 	public void enterRoom(Person x)
-	{   
+	{   explored=true;
 		System.out.println("You enter a plain old room");
 		occupant = x;
 		x.setxLoc(this.xLoc);
@@ -36,7 +36,7 @@ public class Room {
 		}
 		else if(explored)
 		{
-			System.out.println("[e]");
+			System.out.print("[*]");
 		}
 	}
 }

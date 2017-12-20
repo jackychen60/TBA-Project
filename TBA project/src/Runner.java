@@ -30,7 +30,8 @@ public class Runner {
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
 		while(gameOn)
-		{
+		{   
+			
 			Board map = new Board(building);
 			map.printBoard();
 			
