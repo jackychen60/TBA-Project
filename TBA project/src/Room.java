@@ -36,7 +36,7 @@ public class Room {
 		}
 		else if(explored)
 		{
-			System.out.print("[*]");
+			System.out.print("[O]");
 		}
 	}
 }
