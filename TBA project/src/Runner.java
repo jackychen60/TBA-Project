@@ -20,9 +20,9 @@ public class Runner {
 		}
 		
 		//Create a random winning room.
-		int x = (int)(Math.random()*building.length);
-		int y = (int)(Math.random()*building.length);
-		building[x][y] = new WinningRoom(x, y);
+		int x = (int)(4);
+		int y = (int)(4);
+		building[x][y] = new ThiefRoom(x, y);
 				
 		 
 		 //Setup player 1 and the input scanner
@@ -34,6 +34,7 @@ public class Runner {
 			
 			Board map = new Board(building);
 			map.printBoard();
+			
 			
 			//Room explored = new Room();
 			System.out.println("Where would you like to move? (Choose W, S, A, D)");
