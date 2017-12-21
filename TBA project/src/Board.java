@@ -7,7 +7,7 @@ public Board(Room[][]rooms)
 }
 public Board(int size)
 {
-	this.rooms= new Room[5][5];
+	this.rooms= new Room[size][size];
 }
 public void printBoard()
 {

@@ -8,7 +8,7 @@ public class Runner {
 	
 	public static void main(String[] args) {
 	
-		Room[][] building = new Room[5][5];
+		Room[][] building = new Room[4][4];
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
 		{
@@ -19,11 +19,15 @@ public class Runner {
 			}
 		}
 		
-		//Create a random winning room.
-		int x = (int)(4);
-		int y = (int)(4);
+		//Create the thief room.
+		int x = (int)(3);
+		int y = (int)(3);
 		building[x][y] = new ThiefRoom(x, y);
-				
+		//Create the first room
+		int a = (int)(0);
+		int b = (int)(0);
+		building[a][b] = new FirstRoom(a, b);
+	
 		 
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
