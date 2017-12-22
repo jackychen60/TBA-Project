@@ -8,7 +8,7 @@ public class Runner {
 	
 	public static void main(String[] args) {
 	
-		Room[][] building = new Room[4][4];
+		Room[][] building = new Room[3][3];
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
 		{
@@ -20,15 +20,34 @@ public class Runner {
 		}
 		
 		//Create the thief room.
-		int x = (int)(3);
-		int y = (int)(3);
+		int x = (int)(2);
+		int y = (int)(2);
 		building[x][y] = new ThiefRoom(x, y);
 		//Create the first room
 		int a = (int)(0);
 		int b = (int)(0);
 		building[a][b] = new FirstRoom(a, b);
-	
-		 
+		//Create the food court
+		int c =(int)(0);
+		int d =(int)(1);
+		building[c][d] = new FoodCourt(c,d);	 
+		//Create the Macy's
+		int e =(int)(0);
+		int f =(int)(2);
+		building[e][f] = new Macys(e,f);
+		//Create the Target
+		int g =(int)(1);
+		int h =(int)(0);
+		building[g][h] = new Target(g,h);
+		//Create the BestBuy
+		int i =(int)(1);
+		int j =(int)(1);
+		building[i][j] = new BestBuy(i,j);
+		//Create the Bathroom
+		int k =(int)(1);
+		int l =(int)(2);
+		building[k][l] = new Bathroom(k,l);
+		
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
 		building[0][0].enterRoom(player1);
