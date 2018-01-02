@@ -47,6 +47,14 @@ public class Runner {
 		int k =(int)(1);
 		int l =(int)(2);
 		building[k][l] = new Bathroom(k,l);
+		//Create the phone store
+		int m =(int)(2);
+		int n =(int)(0);
+		building[m][n] = new PhoneStore(m,n);
+		//Create the Staples
+		int o =(int)(2);
+		int p =(int)(1);
+		building[o][p] = new Staples(o,p);
 		
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);

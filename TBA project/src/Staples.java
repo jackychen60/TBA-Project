@@ -1,7 +1,6 @@
+public class Staples extends Room{
 
-public class BestBuy extends Room{
-
-	public BestBuy(int x, int y) {
+	public Staples(int x, int y) {
 		super(x, y);
 		// TODO Auto-generated constructor stub
 	}
@@ -12,7 +11,7 @@ public class BestBuy extends Room{
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("Welcome to BestBuy.");
+		System.out.println("Welcome to Staples.");
 		
 	}
 }
