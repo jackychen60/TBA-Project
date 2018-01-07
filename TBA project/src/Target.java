@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Target extends Room{
 
@@ -6,6 +7,7 @@ public class Target extends Room{
 		// TODO Auto-generated constructor stub
 	}
 	@Override
+	//Asks user what they want to do everytime they enter a room.
 	public void enterRoom(Person x) {
 		// TODO Auto-generated method stub
 		setExplored(true);
@@ -13,6 +15,31 @@ public class Target extends Room{
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 		System.out.println("Welcome to Target");
+		System.out.println("1.Explore target for clues.");
+		System.out.println("2.Leave(You must enter 2 twice to leave)");
+		int a = 0;
+		if(choose(a)==1)
+		{
+			System.out.println("You looked all over and found nothing. Press 1 to continue.");
+			
+		}
+		if(choose(a)==2)
+		{
+			System.out.println("You have left Target.");
+			
+		}
+		
+	
+		}
+	//This method allows the user to input choice 1 or choice 2
+	public static int choose(int a)
+	{
+		@SuppressWarnings("resource")
+		Scanner reader = new Scanner(System.in);
+		 a = reader.nextInt();
+		
+		return a;
 		
 	}
+
 }

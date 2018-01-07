@@ -1,18 +1,19 @@
+import java.util.Scanner;
 
 public class ThiefRoom extends Room{
 
 	public ThiefRoom(int x, int y) {
 		super(x, y);
-		// TODO Auto-generated constructor stub
+
 	}
 	@Override
+	//Asks user what they want to do everytime they enter a room.
 	public void enterRoom(Person x) {
-		// TODO Auto-generated method stub
+
 		setExplored(true);
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("You found the Thief!Do you wish to fight him?.");
 		System.out.println("____________________$$$$$$$$$$$\r\n" + 
 				"__________________$$$$$$$$$$$$$$\r\n" + 
 				"_________$$$$$$$$$$$$$$$$$$$$$$$\r\n" + 
@@ -67,6 +68,51 @@ public class ThiefRoom extends Room{
 				"$___________________$$$$$$$$$$$$$$$$$$\r\n" + 
 				"$____________________$$$$$__$$$$$$$$§$\r\n" + 
 				"");
+		System.out.println("You found the Thief!.");
+		System.out.println("What are you going to do?");
+		System.out.println("1.Shoot him");
+		System.out.println("2.Try to cuff him(You must enter 2 twice to try to cuff him)");
+		int a = 0;
+		if(choose(a)==1)
+		{
+			System.out.println(" __     __           _    _ _ _          _   _     _           \r\n" + 
+					" \\ \\   / /          | |  (_) | |        | | | |   (_)          \r\n" + 
+					"  \\ \\_/ /__  _   _  | | ___| | | ___  __| | | |__  _ _ __ ___  \r\n" + 
+					"   \\   / _ \\| | | | | |/ / | | |/ _ \\/ _` | | '_ \\| | '_ ` _ \\ \r\n" + 
+					"    | | (_) | |_| | |   <| | | |  __/ (_| | | | | | | | | | | |\r\n" + 
+					"    |_|\\___/_\\__,_| |_|\\_\\_|_|_|\\___|\\__,_| |_| |_|_|_| |_| |_|\r\n" + 
+					"     \\ \\   / /                   (_)     | |                   \r\n" + 
+					"      \\ \\_/ /__  _   _  __      ___ _ __ | |                   \r\n" + 
+					"       \\   / _ \\| | | | \\ \\ /\\ / / | '_ \\| |                   \r\n" + 
+					"        | | (_) | |_| |  \\ V  V /| | | | |_|                   \r\n" + 
+					"        |_|\\___/ \\__,_|   \\_/\\_/ |_|_| |_(_)                   \r\n" + 
+					"                                                               \r\n" + 
+					"                                                              ");
+		}
+	 if(choose(a)==2)
+		{
+			System.out.println("The thief pulls out his gun and shoots you as you try to cuff him.");
+			System.out.println(" __     __           _                \r\n" + 
+					" \\ \\   / /          | |               \r\n" + 
+					"  \\ \\_/ /__  _   _  | | ___  ___  ___ \r\n" + 
+					"   \\   / _ \\| | | | | |/ _ \\/ __|/ _ \\\r\n" + 
+					"    | | (_) | |_| | | | (_) \\__ \\  __/\r\n" + 
+					"    |_|\\___/ \\__,_| |_|\\___/|___/\\___|\r\n" + 
+					"                                      ");
+			Runner.gameOff();
+		}
+		
+	
+		}
+	//This method allows the user to input choice 1 or choice 2
+	public static int choose(int a)
+	{
+		@SuppressWarnings("resource")
+		Scanner reader = new Scanner(System.in);
+		 a = reader.nextInt();
+		
+		return a;
 		
 	}
+
 }
