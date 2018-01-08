@@ -1,4 +1,6 @@
-
+//Jacky Chen
+//Period 2
+//TBA project
 import java.util.Scanner;
 
 public class Runner {

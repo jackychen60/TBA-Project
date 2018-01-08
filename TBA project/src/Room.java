@@ -1,4 +1,6 @@
-
+//Jacky Chen
+//Period 2
+//TBA project
 public class Room {
 	Person occupant;
 	int xLoc,yLoc;

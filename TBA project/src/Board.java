@@ -1,4 +1,6 @@
-
+//Jacky Chen
+//Period 2
+//TBA project
 public class Board  {
 private Room[][] rooms;
 public Board(Room[][]rooms)
